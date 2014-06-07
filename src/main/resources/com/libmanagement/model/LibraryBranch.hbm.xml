@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 26, 2014 12:53:05 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.libmanagement.model.LibraryBranch" table="library_branch" catalog="librarymanagement_system">
+        <id name="branchId" type="int">
+            <column name="Branch_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="branchName" type="string">
+            <column name="Branch_name" length="45" />
+        </property>
+        <property name="address" type="string">
+            <column name="Address" length="45" />
+        </property>
+<!--        <set name="bookCopieses" inverse="true">
+            <key>
+                <column name="Branchs_id" not-null="true" />
+            </key>
+            <one-to-many class="com.libmanagement.model.BookCopies" />
+        </set>
+        <set name="bookLoanses" inverse="true">
+            <key>
+                <column name="Branchs_id_l" not-null="true" />
+            </key>
+            <one-to-many class="com.libmanagement.model.BookLoans" />
+        </set>-->
+    </class>
+</hibernate-mapping>

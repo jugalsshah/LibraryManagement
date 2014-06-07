@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 26, 2014 12:53:05 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.libmanagement.model.BookLoans" table="book_loans" catalog="librarymanagement_system">
+        <id name="loanId" type="int">
+            <column name="Loan_id" />
+            <generator class="assigned" />
+        </id>
+<!--        <many-to-one name="libraryBranch" class="com.libmanagement.model.LibraryBranch" fetch="select">
+            <column name="Branchs_id_l" not-null="true" />
+        </many-to-one>
+        <many-to-one name="borrower" class="com.libmanagement.model.Borrower" fetch="select">
+            <column name="Cards_no_l" not-null="true" />
+        </many-to-one>
+        <many-to-one name="book" class="com.libmanagement.model.Book" fetch="select">
+            <column name="Books_id_l" length="45" not-null="true" />
+        </many-to-one>-->
+        <property name="dateOut" type="date">
+            <column name="Date_out" length="10" not-null="true" />
+        </property>
+        <property name="dueDate" type="date">
+            <column name="Due_date" length="10" not-null="true" />
+        </property>
+        <property name="dateIn" type="date">
+            <column name="Date_in" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

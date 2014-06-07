@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 26, 2014 12:53:05 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.libmanagement.model.BookAuthors" table="book_authors" catalog="librarymanagement_system">
+        <id name="bookId" type="string">
+            <column name="Book_id" length="45" />
+            <generator class="assigned" />
+        </id>
+<!--        <many-to-one name="book" class="com.libmanagement.model.Book" update="false" insert="false" fetch="select">
+            <column name="Book_id" length="45" not-null="true" unique="true" />
+        </many-to-one>-->
+        <property name="authorsName" type="string">
+            <column name="Authors_name" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
